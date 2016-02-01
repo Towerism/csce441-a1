@@ -9,14 +9,14 @@ void drawHexagon(GLint x, GLint y, GLint w, GLint h, GLint delta,
   GLint meetup = y - (h / 2);
 
   // draw the diagonals
-  drawLine(x, meetup, x + delta, 10, colors[0]); // white
-  drawLine(x, meetup, x + delta, 190, colors[1]); // green
-  drawLine(x + w - delta, y - h, x + w, meetup, colors[2]); // purple
-  drawLine(x + w - delta, y, x + w, meetup, colors[3]); // yellow
+  drawLine(x, meetup, x + delta, 10, colors[0]); 
+  drawLine(x, meetup, x + delta, 190, colors[1]);
+  drawLine(x + w - delta, y - h, x + w, meetup, colors[2]);
+  drawLine(x + w - delta, y, x + w, meetup, colors[3]);
 
   // draw the horizontals
-  drawLine(x + delta, y - h, x + w - delta, y - h, colors[4]); // orange
-  drawLine(x + delta, y, x + w - delta, y, colors[5]); // brown
+  drawLine(x + delta, y - h, x + w - delta, y - h, colors[4]);
+  drawLine(x + delta, y, x + w - delta, y, colors[5]);
 }
 
 void drawLine(GLint x1, GLint y1, GLint x2, GLint y2, ColorSetter color) {
