@@ -1,4 +1,4 @@
-CXXFLAGS ?= -c
+CXXFLAGS ?= -std=c++11 -c
 LDFLAGS ?= -lglut -lGL -lGLU
 CXX ?= g++
 RM ?= rm -rf

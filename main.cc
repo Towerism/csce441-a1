@@ -1,6 +1,6 @@
 #include <GL/glut.h>
 
-#include "hexagon.h"
+#include "hexagon.hh"
 
 void init () {
   glClearColor(0.0, 0.0, 0.0, 0.0); // Set display-window color to white
@@ -15,7 +15,15 @@ void lineSegments() {
 
   // draw a rainbow colored 190x180 octogon at coordinates (110, 190)
   // with a delta of 45 
-  drawHexagon(110, 190, 190, 180, 48, true);
+  std::array<ColorSetter, 6> colors = {
+    ColorSetter(1.0, 1.0, 1.0), // white
+    ColorSetter(0.0, 1.0, 0.0), // green
+    ColorSetter(0.4, 0.1, 0.8), // purple
+    ColorSetter(1.0, 1.0, 0.0), // yellow
+    ColorSetter(1.0, 0.5, 0.1), // orange
+    ColorSetter(0.4, 0.2, 0.05) // brown
+  };
+  drawHexagon(110, 190, 190, 180, 48, colors);
 
   glFlush(); // Process all OpenGL routines as quickly as possible
 }
