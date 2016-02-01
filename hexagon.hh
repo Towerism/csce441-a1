@@ -1,3 +1,5 @@
+#pragma once  
+
 #include <GL/glut.h>
 
 void drawHexagon(GLint x, GLint y, GLint w, GLint h, GLint delta, bool isRainbow = false);
