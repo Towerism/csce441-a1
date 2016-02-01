@@ -1,14 +1,16 @@
-CFLAGS ?=
+CXXFLAGS ?= -c
 LDFLAGS ?= -lglut -lGL -lGLU
-CC ?= gcc
+CXX ?= g++
 RM ?= rm -rf
 EXECUTABLE ?= main
+SRCS := main.cc hexagon.cc
+OBJECTS := $(SRCS:.cc=.o)
 
-$(EXECUTABLE): main.o
-	$(CC) $(LDFLAGS) $^ -o $@
+$(EXECUTABLE): $(OBJECTS)
+	$(CXX) $(LDFLAGS) $^ -o $@
 
-main.o: main.c
-	$(CC) $(CFLAGS) -c $<
+.cc.o:
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
 	$(RM) *.o $(EXECUTABLE) 
