@@ -11,7 +11,6 @@ void init () {
 
 void lineSegments() {
   glClear(GL_COLOR_BUFFER_BIT); // Clear display window
-  glColor3f(0.0, 0.4, 0.2); // Set line segment color to green
 
   // draw a rainbow colored 190x180 octogon at coordinates (110, 190)
   // with a delta of 45 
