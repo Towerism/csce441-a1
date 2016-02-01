@@ -1,4 +1,4 @@
-#include "hexagon.h"
+#include "hexagon.hh"
 
 // draw a w by h octogon with x, y coordinates being the top left
 // corner of an imaginary encompassing square
