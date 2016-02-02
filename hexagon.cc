@@ -9,8 +9,8 @@ void drawHexagon(GLint x, GLint y, GLint w, GLint h, GLint delta,
   GLint meetup = y - (h / 2);
 
   // draw the diagonals
-  drawLine(x, meetup, x + delta, 10, colors[0]); 
-  drawLine(x, meetup, x + delta, 190, colors[1]);
+  drawLine(x, meetup, x + delta, y - h, colors[0]); 
+  drawLine(x, meetup, x + delta, y, colors[1]);
   drawLine(x + w - delta, y - h, x + w, meetup, colors[2]);
   drawLine(x + w - delta, y, x + w, meetup, colors[3]);
 

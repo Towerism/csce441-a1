@@ -22,7 +22,7 @@ void lineSegments() {
     ColorSetter(1.0, 0.5, 0.1), // orange
     ColorSetter(0.4, 0.2, 0.05) // brown
   };
-  drawHexagon(110, 190, 190, 180, 48, colors);
+  drawHexagon(110, 185, 190, 170, 48, colors);
 
   glFlush(); // Process all OpenGL routines as quickly as possible
 }
